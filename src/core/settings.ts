@@ -25,7 +25,7 @@ export function isValidOpenPosition(position: string): position is OpenPosition 
 const ModalFormSettingsSchema = object({
     editorPosition: optional(OpenPositionSchema, 'right'),
     attachShortcutToGlobalWindow: optional(boolean(), false),
-    globalNamespace: optional(enumType(['MF', 'ModalForm']), 'MF'),
+    globalNamespace: optional(enumType(['mf', 'ModalForm']), 'mf'),
     formDefinitions: array(unknown()),
 });
 
@@ -35,7 +35,7 @@ export function getDefaultSettings(): ModalFormSettings {
     return {
         editorPosition: 'right',
         attachShortcutToGlobalWindow: false,
-        globalNamespace: 'MF',
+        globalNamespace: 'mf',
         formDefinitions: [],
     };
 }
@@ -62,5 +62,5 @@ export interface ModalFormSettings {
     editorPosition: OpenPosition;
     attachShortcutToGlobalWindow: boolean;
     formDefinitions: (MigrationError | FormDefinition)[];
-    globalNamespace: 'MF' | 'ModalForm';
+    globalNamespace: 'mf' | 'ModalForm';
 }

@@ -33,7 +33,7 @@ declare module "obsidian" {
 declare global {
     interface Window {
         DataviewAPI?: DataviewApi;
-        MF?: API;
+        mf?: API;
         ModalForm?: API;
         moment: typeof moment;
     }

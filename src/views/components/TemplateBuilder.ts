@@ -54,7 +54,7 @@ function compileOpenForm(
         fieldsToOmit.length > 0 ? `, ${JSON.stringify({ omit: fieldsToOmit }, null, 8)}` : "";
     const args = `"${formName}"${omitOptions}`;
     if (usesGlobal) {
-        return [`const ${resultName} = await MF.openForm(${args});`];
+        return [`const ${resultName} = await .openForm(${args});`];
     }
     return `
     const modalForm = app.plugins.plugins.modalforms.api;
