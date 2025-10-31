@@ -49,7 +49,8 @@ const config = {
     treeShaking: true,
     outfile: "main.js",
     define: {
-        "process.env.NODE_ENV": JSON.stringify(prod ? "production" : "development"),
+        // "process.env.NODE_ENV": JSON.stringify(prod ? "production" : "development"),
+        "process.env.NODE_ENV": JSON.stringify(prod ? "production" : "production"),
     },
 };
 
